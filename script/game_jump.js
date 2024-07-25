@@ -96,10 +96,12 @@
     //监听平台触摸事件
     function touchStart(e) {
         if (!(e.target.classList.contains('person_on'))) return
+        e.preventDefault
         startTime = Date.now()
     }
     function touchEnd(e) {
         if (!(e.target.classList.contains('person_on'))) return
+        e.preventDefault
         exitTime = Date.now()
         wayLength = exitTime - startTime
         if (wayLength > 2500) wayLength = 2500
