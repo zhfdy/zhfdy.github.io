@@ -74,7 +74,7 @@
         //开挂按钮
         const exit = add_control('exit', '开挂', true)
         document.querySelector('.control_exit').addEventListener('click', function () {
-
+            alert('开发中')
         })
     }
     add_li()
