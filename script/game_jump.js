@@ -147,6 +147,7 @@
                     if (isInRange(personTop, platformTop - 45, platformTop + 45) && isInRange(personLeft, platformLeft - 45, platformLeft + 45)) {
                         updateMark(true)
                         myMarkNum++
+                        if (myMarkNum >= 5) createAlert('恭喜', '你已经获得5分了，加油加油!')
                         saveMark(myMarkNum)
                     } else {
                         updateMark(false)
