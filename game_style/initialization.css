@@ -149,6 +149,8 @@ body {
     align-items: center;
     justify-content: center;
     background-image: linear-gradient(to bottom right, #0db84c, #7ff3ca, rgb(255, 255, 255), #deec75, #ff93ef);
+    background-image: url('../bg.jpg');
+    background-size: cover;
     border-radius: 8px;
     border: 1px solid #ffffff;
     box-shadow: 0 0 10px #999;
@@ -163,11 +165,12 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    color: #2ff88a;
-    background-image: linear-gradient(to bottom right, rgba(237, 51, 51, 0.704), rgba(214, 128, 47, 0.929));
+    color: white;
+    background-image: linear-gradient(to bottom right, rgba(237, 51, 51, 0.304), rgba(214, 128, 47, 0.429));
     /* -webkit-background-clip: text;
     background-clip: text; */
-    box-shadow: 0 2px 3px #e2712a;
+    text-shadow: 0 0 2px white;
+    box-shadow: 0 2px 3px rgba(237, 80, 50, .2);
     border-radius: 8px 8px 0 0;
     letter-spacing: 5px;
 }
@@ -194,17 +197,18 @@ body {
     border-radius: 2px;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
     letter-spacing: 2px;
+    background-color: rgba(233, 233, 233, .2);
     font-family: monospace, kaiti;
     text-shadow: 1px 1px 2px #232323, -1px -1px 2px #ffffff;
 }
 .rank_item:nth-child(1) {
-    background-color: rgba(137, 241, 123, 0.6);
+    background-color: rgba(207, 85, 83, 0.6);
 }
 .rank_item:nth-child(2) {
-    background-color: rgba(82, 224, 56, 0.4);
+    background-color: rgba(202, 74, 86, 0.4);
 }
 .rank_item:nth-child(3) {
-    background-color: rgba(99, 203, 43, 0.2);
+    background-color: rgba(203, 43, 43, 0.2);
 }
 
 .rank_item:hover {
@@ -215,13 +219,13 @@ body {
 
 .rank_name {
     font-size: 16px;
-    color: #e42626;
+    color: rgba(213, 213, 233, 1);
     margin-right: 20px;
 }
 
 .rank_score {
     font-size: 16px;
-    color: #7e8cdb;
+    color: white;
 }
 
 .alert {
