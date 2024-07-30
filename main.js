@@ -28,11 +28,13 @@
 
     //填充模块背景色
     const game_items = document.querySelectorAll('[class^="game_"]')
-    setInterval(() => {
+    setInterval(madeColor, 5000)
+    function madeColor(){
         game_items.forEach(item => {
             item.style.backgroundColor = getRandomColor()
-        })
-    }, 5000)
+            })
+    }
+    madeColor()
 
     //随机颜色
     function getRandomColor() {
