@@ -18,12 +18,13 @@
     game_boxA.classList.add('gameboxA')
 
     //创建游戏项
-    const game_apple = new MakeItem(game_boxA, 'game_apple', '摘苹果apple')
-    const game_cherry = new MakeItem(game_boxA, 'game_2048', '2048方块')
-    const game_clock = new MakeItem(game_boxA, 'game_clock', '倒计时clock')
-    const game_fight = new MakeItem(game_boxA, 'game_fight', '区域战争fight')
-    const game_jump = new MakeItem(game_boxA, 'game_jump', '跳一跳jump')
-    const game_snake = new MakeItem(game_boxA, 'game_snake', '贪吃蛇snake')
+    const game_apple = new MakeItem(game_boxA, 'game_apple', 'apple')
+    const game_cherry = new MakeItem(game_boxA, 'game_2048', '2048')
+    const game_clock = new MakeItem(game_boxA, 'game_clock', 'clock')
+    const game_fight = new MakeItem(game_boxA, 'game_fight', 'fight')
+    const game_jump = new MakeItem(game_boxA, 'game_jump', 'jump')
+    const game_snake = new MakeItem(game_boxA, 'game_snake', 'snake')
+    const game_world = new MakeItem(game_boxA, 'game_world', 'world')
 
     //填充模块背景色
     const game_items = document.querySelectorAll('[class^="game_"]')
