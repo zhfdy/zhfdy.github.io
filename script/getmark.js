@@ -1,11 +1,7 @@
     //初始化分数
     let myMarkNum = 0
-    const mark = localStorage.getItem('myMark')
-    if (mark) {
-        myMarkNum = mark
-    } else {
-        myMarkNum = 0
-    }
+    const mark = localStorage.getItem('myMarkNum')
+    mark?myMarkNum = mark:myMarkNum = 0
 
     //存储分数
     function saveMark(value) {
