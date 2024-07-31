@@ -199,15 +199,6 @@ body {
     font-family: monospace, kaiti;
     text-shadow: 1px 1px 2px #232323, -1px -1px 2px #ffffff;
 }
-.rank_item:nth-child(1) {
-    background-color: rgba(207, 85, 83, 0.6);
-}
-.rank_item:nth-child(2) {
-    background-color: rgba(202, 74, 86, 0.4);
-}
-.rank_item:nth-child(3) {
-    background-color: rgba(203, 43, 43, 0.2);
-}
 
 .rank_item:hover {
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
