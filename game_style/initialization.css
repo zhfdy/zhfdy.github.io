@@ -148,8 +148,6 @@ body {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to bottom right, #0db84c, #7ff3ca, rgb(255, 255, 255), #deec75, #ff93ef);
-    background-image: url('../bg.jpg');
     background-size: cover;
     border-radius: 8px;
     border: 1px solid #ffffff;
