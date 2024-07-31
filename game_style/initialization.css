@@ -164,7 +164,7 @@ body {
     align-items: center;
     font-size: 20px;
     color: white;
-    background-image: linear-gradient(to bottom right, rgba(237, 51, 51, 0.304), rgba(214, 128, 47, 0.429));
+    background-image: linear-gradient(to bottom right, rgba(237, 233, 233, 0.304), rgba(243, 243, 255, 0.429));
     /* -webkit-background-clip: text;
     background-clip: text; */
     text-shadow: 0 0 2px white;
