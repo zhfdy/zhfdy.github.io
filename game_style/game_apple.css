@@ -4,3 +4,16 @@ body {
     font-size: 16px;
 }
 
+.rank_box {
+    background-image: url('../ldjj.jpg');
+}
+
+.rank_item:nth-child(1) {
+    background-color: rgba(207, 85, 83, 0.6);
+}
+.rank_item:nth-child(2) {
+    background-color: rgba(202, 74, 86, 0.4);
+}
+.rank_item:nth-child(3) {
+    background-color: rgba(203, 43, 43, 0.2);
+}
