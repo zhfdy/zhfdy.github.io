@@ -9,11 +9,11 @@ body {
 }
 
 .rank_item:nth-child(1) {
-    background-color: rgba(207, 85, 83, 0.6);
+    background-color: rgba(158, 35, 158, 0.6);
 }
 .rank_item:nth-child(2) {
-    background-color: rgba(202, 74, 86, 0.4);
+    background-color: rgba(152, 45, 166, 0.4);
 }
 .rank_item:nth-child(3) {
-    background-color: rgba(203, 43, 43, 0.2);
+    background-color: rgba(167, 60, 170, 0.2);
 }
