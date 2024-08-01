@@ -19,13 +19,13 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
     font-size: 15px;
-    user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
 
 body {
     width: 100vw;
     min-height: 100vh;
+    background: url('fulina.mp4');
 }
 
 
