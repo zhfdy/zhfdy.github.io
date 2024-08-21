@@ -1,0 +1,124 @@
+
+
+.grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-y), 1fr);
+    grid-template-rows: repeat(var(--grid-x), 1fr);
+}
+
+[class^="grid-item"] {
+    border: .5px solid rgba(0, 0, 0, 0.063);
+}
+
+.snake {
+    background-image: url('../images/body/snake.png');
+    background-position: center center;
+    background-size: 100% 100%;
+    position: absolute;
+    transition: .04s;
+    cursor: pointer;
+}
+.snake:hover::after{
+    content: '作者qq:1247944718';
+    position: absolute;
+    top: -10px;
+    left: -35px;
+    width: 80px;
+    height: 20px;
+    font-size: 10px;
+    transform: scale(0.8);
+    background-color: #ffffff;
+    border: 1px solid #b8b8b8;
+    color: red;
+    padding: 3px;
+    border-radius: 5px;
+    animation: snake-hover 0.5s ease-in-out forwards;
+}
+@keyframes snake-hover {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        top: -30px;
+        opacity: 1;
+    }
+}
+
+
+
+.food {
+    background-position: center center;
+    background-size: 100% 100%;
+    position: absolute;
+    cursor: pointer;
+}
+.food:hover::after{
+    content: '吃不到我~';
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 10px;
+    background-color: #ffffff;
+    border: 1px solid #bfbfbf;
+    padding: 5px;
+    border-radius: 5px;
+    animation: snake-hover 0.5s ease-in-out forwards;
+}
+
+.food1 {
+    background-image: url('../images/body/food/food0.png');
+}
+.food2 {
+    background-image: url('../images/body/food/food1.png');
+}
+.food3 {
+    background-image: url('../images/body/food/food2.png');
+}
+.food4 {
+    background-image: url('../images/body/food/food3.png');
+}
+.food5 {
+    background-image: url('../images/body/food/food4.png');
+}
+
+
+
+.btn_box {
+    position: absolute;
+    bottom: -130px;
+    left: calc(50% - 150px);
+    width: 300px;
+    height: 120px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: #c7c7c7;
+    border-radius: 5px;
+}
+.btn_box div {
+    margin: 5px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+
+}
+.btn_box div:active {
+    
+}
+
+#controls_up {
+    
+}
