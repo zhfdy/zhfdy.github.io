@@ -19,7 +19,7 @@
 
     //创建游戏项
     const game_apple = new MakeItem(game_boxA, 'game_apple', 'apple')
-    const game_cherry = new MakeItem(game_boxA, 'game_2048', '2048')
+    const game_cherry = new MakeItem(game_boxA, 'game_numadd', 'numadd')
     const game_clock = new MakeItem(game_boxA, 'game_clock', 'clock')
     const game_fight = new MakeItem(game_boxA, 'game_fight', 'fight')
     const game_jump = new MakeItem(game_boxA, 'game_jump', 'jump')
