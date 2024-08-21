@@ -3,12 +3,6 @@
     //初始化任务偏移量
     const personOffset = 320
 
-    const markBox = document.createElement('div')
-    markBox.classList.add('mark')
-    document.querySelector('.game_box').appendChild(markBox)
-    markBox.textContent = `分数：${myMarkNum}`
-
-
     //生成平台构造函数
     class Platform {
         constructor(x, y, width, height) {
@@ -42,6 +36,12 @@
     //生成第一个平台
     generatePlatform()
 
+    //修改难度
+    document.body.addEventListener('click', (event) => {
+        if (!(event.target.classList.contains('exit_item'))) return
+        const value = event.target.getAttribute('data-value')
+        
+    })
 
     //生成新的平台
     function generatePlatform() {
@@ -144,32 +144,11 @@
                     const personTop = endY + 320
                     const personLeft = endX + 320
 
-                    if (isInRange(personTop, platformTop - 45, platformTop + 45) && isInRange(personLeft, platformLeft - 45, platformLeft + 45)) {
+                    if (isInRange(personTop, platformTop - 25, platformTop + 25) && isInRange(personLeft, platformLeft - 45, platformLeft + 45)) {
                         updateMark(true)
-                        myMarkNum++
-                        if (myMarkNum === 5) createAlert('恭喜', '你已经获得5分了，加油加油!')
-                        saveMark(myMarkNum)
                     } else {
                         updateMark(false)
-                        myMarkNum--
-                        saveMark(myMarkNum)
                     }
-
-                    //更新分数
-                    function updateMark(flag) {
-                        const markChangeText = document.createElement('span')
-                        markChangeText.classList.add('mark_change')
-                        document.querySelector('.mark').insertAdjacentElement('afterend', markChangeText)
-                        flag
-                            ? (markChangeText.textContent = '+1'
-                                , markChangeText.style.color = 'green')
-                            : (markChangeText.textContent = '-1'
-                                , markChangeText.style.color = 'red')
-                        setTimeout(() => markChangeText.remove(), 1500)
-                    }
-
-                    //更新分数
-                    markBox.textContent = `分数：${myMarkNum}`
                 }
             }
 
