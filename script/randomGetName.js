@@ -17,7 +17,7 @@ export async function randomGetName() {
             }
 
             img.onerror = () => {
-                onloadImg(imgsUrl, index + 1)
+                console.log(img.src + '获取失败')
             }
         }
         
