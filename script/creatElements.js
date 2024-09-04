@@ -83,12 +83,8 @@ import { madeTitle, randomGetName} from './randomGetName.js'
                 j = 5
             }
 
-            else if (i >= 200 && i < 300) {
-                j = 10
-            }
-
-            else if (i >= 300 && i < 500) {
-                j = 40
+            else if (i >= 200 && i < 700) {
+                j = 150
                 nameBox.style.color = 'rgba(225, 155, 55, 1)'
             }
 
