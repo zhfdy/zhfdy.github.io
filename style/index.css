@@ -153,6 +153,7 @@ li {
     border: none;
     border-radius: 5px;
     color: white;
+    font-size: 12px;
     cursor: pointer;
     overflow: hidden;
     transition: .3s;
