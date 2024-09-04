@@ -180,6 +180,12 @@
             "name" : "吴琼",
             "image": "wq.png",
             "id": "30"
+        },
+
+        {
+            "name" : "罗忠康",
+            "image" : "lzk.png",
+            "id" : "31"
         }
     ]
 }
