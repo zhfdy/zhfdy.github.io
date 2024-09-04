@@ -160,6 +160,6 @@ li {
 }
 .get_name:hover{
     color: #3d08b1;
-    font-size: 2em;
+    font-size: 20px;
     transition: .3s;
 }
