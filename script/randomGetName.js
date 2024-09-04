@@ -34,7 +34,7 @@ export async function randomGetName() {
 
         return data.people[randomNum]
     } catch (error) {
-        console.error('Error fetching or processing data:', error)
+        console.error(error)
         throw error
     }
 }
