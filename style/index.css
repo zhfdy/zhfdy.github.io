@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
+    transition: .3s;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -88,6 +89,7 @@ li {
     height: 35vmin;
     border-radius: 5px;
     background-color: white;
+    opacity: .8;
 }
 
 .app_content_left_bottom {
@@ -119,6 +121,7 @@ li {
 }
 
 .app_content_right_top_list {
+    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
@@ -126,14 +129,37 @@ li {
     justify-content: center;
     align-items: center;
 }
-.app_content_right_top_list p{
-    font: 500 25px/20px myfont;
-}
+
 
 .app_content_right_top_list li {
+    position: relative;
     width: 70%;
     height: 20%;
+    line-height: 50px;
     border-bottom: 1px solid #ccc;
+}
+
+.agoName {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    animation: agoName .5s ease-in-out forwards;
+
+}
+
+@keyframes agoName {
+    0% {
+        top: -20px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
 }
 
 .app_content_right_bottom {
@@ -152,15 +178,17 @@ li {
     background-size: 500% 100%;
     border: none;
     border-radius: 5px;
-    color: white;
-    font-size: 12px;
+    color: rgb(32, 202, 228);
+    font-size: 20px;
+    box-shadow: 0 0 20px #fff;
     cursor: pointer;
     overflow: hidden;
     transition: .3s;
     will-change: color, font-size;
 }
-.get_name:hover{
-    color: #3d08b1;
-    font-size: 20px;
+.get_name_off{
+    color: rgba(150, 154, 158, 0.526);
+    box-shadow: 0 0 0 transparent;
+    cursor: default;
     transition: .3s;
 }
