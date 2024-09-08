@@ -83,7 +83,8 @@ li {
     width: 35vmin;
     height: 35vmin;
     border-radius: 5px;
-    background-color: white;
+    background-image: url('../image/bg.png');
+    baclground-size: cover;
     opacity: .8;
 }
 
