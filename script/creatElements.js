@@ -33,7 +33,7 @@ async function randomGetName() {
                 <div class="app_content">
                     <div class="app_content_left">
                         <div class="app_content_left_top">
-                            <img class="image" src="" alt="">
+                            <div class="image"></div>
                         </div>
                         <div class="app_content_left_bottom">
                             <p class="name">by_zhf</p>
@@ -94,8 +94,7 @@ async function randomGetName() {
         i += j
 
         nameBox.textContent = people.name
-        imageBox.src = `image/${people.image}`
-        imageBox.alt = people.name
+        imageBox.style.backgroundImage = `url('image/${people.image}')`
 
         if (i >= 0 && i < 100) {
             j = 2
