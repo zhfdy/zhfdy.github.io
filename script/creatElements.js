@@ -152,9 +152,11 @@ async function randomGetName() {
         document.body.style.backgroundColor = document.body.style.backgroundColor === '' ? 'white' : ''
         document.body.style.color = document.body.style.color === '' ? 'black' : ''
     }
-    /*document.addEventListener('keyup', (e) = {
-        if(e.key = '6') backgroundColorInvert()
-    })*/
+    document.addEventListener('keyup', e => {
+        if(e.key === '6') { 
+            backgroundColorInvert() 
+        }
+    })
     document.addEventListener('click', backgroundColorInvert)
 
 })()
