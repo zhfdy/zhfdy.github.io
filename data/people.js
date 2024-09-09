@@ -30,12 +30,14 @@ people = {
             "image": "chj.png",
             "id": "5"
         },
-
-        {
-            "name": "蔡雨馨",
-            "image": "cyx.png",
+      
+        /*{
+            "name": "z",
+            "image": "zhf.png",
             "id": "6"
         },
+
+*/
 
         {
             "name": "吕知容",
@@ -134,8 +136,8 @@ people = {
         },
 
         {
-            "name": "1",
-            "image": "zhf.png",
+            "name": "罗忠康",
+            "image": "lzk.png",
             "id": "23"
         },
 
@@ -146,8 +148,8 @@ people = {
         },
 
         {
-            "name": "唐静怡",
-            "image": "tjy.png",
+            "name": "刘楚昊",
+            "image": "lch.png",
             "id": "25"
         },
 
@@ -180,12 +182,6 @@ people = {
             "name" : "吴琼",
             "image": "wq.png",
             "id": "30"
-        },
-
-        {
-            "name" : "罗忠康",
-            "image" : "lzk.png",
-            "id" : "31"
         }
     ]
 }
