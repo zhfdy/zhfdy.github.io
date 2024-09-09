@@ -6,10 +6,10 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-@font-face {
+/*@font-face {
     font-family: myfont;
     src: url('../font/myfont.woff');
-}
+}*/
 
 body {
     width: 100vw;
@@ -18,7 +18,7 @@ body {
     background-color: black;
     color: white;
     transition: .3s;
-    font-family: myfont;
+    font-family: sans-serif;
 }
 
 ul {
@@ -103,7 +103,7 @@ li {
     box-shadow: 0 0 3px rgb(134, 134, 134);
 }
 .name {
-    font: 600 4em myfont;
+    font: 600 4em sans-serif;
 }
 
 
