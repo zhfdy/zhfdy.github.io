@@ -5,13 +5,18 @@ function madeTitle() {
     return times
 }
 
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+}
+
 async function randomGetName() {
     try {
         const randomNum = Math.floor(Math.random() * people.people.length)
 
         return people.people[randomNum]
     } catch (error) {
-        console.error('Error fetching or processing data:', error)
+        console.error('获取不到people信息:', error)
         throw error
     }
 }
@@ -19,7 +24,7 @@ async function randomGetName() {
 
 
 ; (function () {
-    //创建主体元素id
+    //创建主体元素
     const app = document.createElement('div')
     app.id = 'app'
     document.body.appendChild(app)
@@ -42,11 +47,11 @@ async function randomGetName() {
                     <div class="app_content_right">
                         <div class="app_content_right_top">
                             <ul class="app_content_right_top_list">
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                                <li>4</li>
-                                <li>5</li>
+                                <li>1.</li>
+                                <li>2.</li>
+                                <li>3.</li>
+                                <li>4.</li>
+                                <li>5.</li>
                             </ul>
                         </div>
                         <div class="app_content_right_bottom">
@@ -128,11 +133,11 @@ async function randomGetName() {
         agoNameArr.unshift(name)
         agoNameArr.length > 5
             ? (agoNameArr.pop())
-            : ''
+            : void 0
 
         const agoNameBox = document.querySelectorAll('.app_content_right_top_list li')
         const agoName = document.querySelectorAll('.agoName')
-        agoName ? agoName.forEach(name => name.remove()) : ''
+        agoName ? agoName.forEach(name => name.remove()) : void 0
 
         agoNameArr.map((name, index) => {
             const agoName = document.createElement('span')
@@ -142,8 +147,14 @@ async function randomGetName() {
         })
 
     }
-
-    function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms))
+  
+    function backgroundColorInvert(){
+        document.body.style.backgroundColor = document.body.style.backgroundColor === '' ? 'white' : ''
+        document.body.style.color = document.body.style.color === '' ? 'black' : ''
     }
+    /*document.addEventListener('keyup', (e) = {
+        if(e.key = '6') backgroundColorInvert()
+    })*/
+    document.addEventListener('click', backgroundColorInvert)
+
 })()
