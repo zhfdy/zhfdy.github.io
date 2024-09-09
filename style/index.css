@@ -3,16 +3,22 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
-    transition: .3s;
     -webkit-tap-highlight-color: transparent;
 }
 
+@font-face {
+    font-family: myfont;
+    src: url('../font/myfont.woff');
+}
+
 body {
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
-    background-color: rgb(0, 0, 0);
-    color: #fff;
-    font-family: sans-serif;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+    transition: .3s;
+    font-family: myfont;
 }
 
 ul {
@@ -31,7 +37,7 @@ li {
 
 .app_mian {
     margin: auto;
-    width: 90%;
+    width: 95%;
     max-width: 800px;
     height: 530px;
     display: flex;
@@ -84,7 +90,7 @@ li {
     height: 35vmin;
     border-radius: 5px;
     background-image: url('../image/bg.png');
-    baclground-size: cover;
+    background-size: cover;
     opacity: .8;
 }
 
@@ -97,8 +103,7 @@ li {
     box-shadow: 0 0 3px rgb(134, 134, 134);
 }
 .name {
-    font: 600 4em sans-serif;
-    transition: .3s;
+    font: 600 4em myfont;
 }
 
 
@@ -131,7 +136,7 @@ li {
     position: relative;
     width: 70%;
     height: 20%;
-    line-height: 50px;
+    line-height: 100%;
     border-bottom: 1px solid #ccc;
 }
 
@@ -143,17 +148,19 @@ li {
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    animation: agoName .5s ease-in-out forwards;
+    animation: agoName .5s ease-in forwards;
 
 }
 
 @keyframes agoName {
     0% {
         top: -20px;
+        font-size: 12px;
         opacity: 0;
     }
     100% {
         top: 0;
+        font-size: 16px;
         opacity: 1;
     }
 }
