@@ -157,6 +157,6 @@ async function randomGetName() {
             backgroundColorInvert() 
         }
     })
-    document.addEventListener('click', backgroundColorInvert)
+    /*document.addEventListener('click', backgroundColorInvert)*/
 
 })()
