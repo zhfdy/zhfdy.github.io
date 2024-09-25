@@ -1,0 +1,19 @@
+
+{
+    "boss_spider": {
+        "name": "Spider",
+        "type": "dangerous",
+        "number": 3,
+        "data": [
+            {
+                "name": "Spider",
+                "age": 500,
+                "gender": "woman",
+                "hp": 1000,
+                "mp": 200,
+                "attack": 12,
+                "defense": 0
+            }
+        ]
+    }
+}
