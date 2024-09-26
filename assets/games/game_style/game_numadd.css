@@ -1,0 +1,15 @@
+
+
+.rank_box {
+    background-image: url('../images/rank/ldjj.jpg');
+}
+
+.rank_item:nth-child(1) {
+    background-color: rgba(118, 11, 195, 0.542);
+}
+.rank_item:nth-child(2) {
+    background-color: rgba(185, 53, 200, 0.537);
+}
+.rank_item:nth-child(3) {
+    background-color: rgba(244, 85, 247, 0.342);
+}
