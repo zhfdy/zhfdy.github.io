@@ -6,16 +6,16 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-@font-face {
+/*@font-face {
     font-family: myfont;
     src: url('../font/myfont.woff');
-}
+}*/
 
 body {
     width: 100vw;
     min-height: 100vh;
     background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.732), rgba(26, 255, 152, 0.216));
-    font-family: myfont;
+    font-family: kaiti sans-serif;
     color: #2c2c2c;
 }
 
@@ -30,7 +30,6 @@ body {
     align-items: center;
     font-size: 2em;
     font-style: oblique;
-    font-family: 'Courier New', Courier, monospace;
     font-weight: 600;
     color: transparent;
     background-size: 200% 200%;
