@@ -1,0 +1,17 @@
+
+
+.white_space {
+    background-color: rgb(252, 252, 252);
+    color: #666;
+    border-radius: 1em;
+    padding: 5px;
+    margin: 5vmin;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    text-align: center;
+    letter-spacing: 2px;
+    flex-flow: row wrap;
+}
