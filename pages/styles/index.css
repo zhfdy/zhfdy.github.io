@@ -79,7 +79,7 @@ div {
     text-decoration: underline solid #eaeaea;
     color: transparent;
     background-image: linear-gradient(30deg, rgb(75, 219, 255), rgb(253, 141, 255));
-    background-clip: text;
+    -webkit-background-clip: text;
     font-family: kaiti, sans-serif;
 }
 .xxitem1:hover {
