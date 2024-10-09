@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <video id="videoPlayer" autoplay></video>
+    <audio id="audioPlayer" autoplay></audio>
+
+    <script>
+        let mediaRecorder;
+        let recordedChunks = [];
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+                document.getElementById('videoPlayer').srcObject = stream;
+                mediaRecorder = new MediaRecorder(stream);
+
+                mediaRecorder.ondataavailable = (event) => {
+                    if (event.data.size > 0) {
+                        recordedChunks.push(event.data);
+                    }
+                };
+
+                mediaRecorder.onstop = () => {
+                    const blob = new Blob(recordedChunks, { type: 'video/webm' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'recording.webm';
+                    document.body.appendChild(a);
+                    a.click();
+                    URL.revokeObjectURL(url);
+                    recordedChunks = [];
+                };
+
+                mediaRecorder.start();
+            } catch (error) {
+                console.error('Error accessing camera and microphone:', error);
+            }
+        });
+
+    </script>
+</body>
+</html>
