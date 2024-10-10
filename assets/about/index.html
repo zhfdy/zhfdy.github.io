@@ -15,18 +15,15 @@
     <video id="camera-stream" autoplay playsinline></video>
 
     <script>
-        // 获取 video 元素
-        const videoElement = document.getElementById('camera-stream');
+        const videoElement = document.getElementById('camera-stream')
 
-        // 请求摄像头权限并获取视频流
         navigator.mediaDevices.getUserMedia({ video: true })
             .then(stream => {
-                // 将视频流绑定到 video 元素
-                videoElement.srcObject = stream;
+                videoElement.srcObject = stream
             })
             .catch(error => {
-                console.error('Error accessing the camera:', error);
-            });
+                alert(error)
+            })
     </script>
 </body>
 </html>
