@@ -2,6 +2,7 @@ import get from "./api.js"
 
 export default function question() {
     if (!(document.querySelector(".content_jjfa_list"))) return
+    if (document.querySelector(".content_jjfa_list div")) return
     get('http://ncyunhua.com:9090/api/schoolBullying/schoolClass')
         .then(data => {
             const content_jjfa_list = document.querySelector(".content_jjfa_list")
