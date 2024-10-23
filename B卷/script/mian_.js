@@ -279,10 +279,23 @@ export const ly = new Creat({
     name: 'ly',
     sons: [
         {
-            name: '',
+            name: 'ly_add_btn',
+            text: '留言'
         },
         {
-            name: '',
+            name: 'content',
+            sons: [
+                {
+                    name: 'content_ly_title',
+                    text: '留言内容'
+                },
+                {
+                    name: 'line'
+                },
+                {
+                    name: 'content_ly_list',
+                }
+            ]
         }
     ]
 })
