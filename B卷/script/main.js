@@ -3,9 +3,9 @@ import get from "./api.js"
 import banner from "./banner.js"
 import search from "./search.js"
 import question from "./question.js"
+import messages from "./messages.js"
 import { sy, qzzx, xxdt, jjfa, ly } from "./mian_.js"
-question()
-;
+
 (function () {
     function creatDom() {
         const app = new Creat({
@@ -129,6 +129,7 @@ question()
                 break
             case 4:
                 mainList[4].into('.main')
+                messages()
                 break
         }
     }
