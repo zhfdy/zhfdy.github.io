@@ -1,21 +1,16 @@
-import get from "./api.js";
+import get from "./api.js"
 
-export default function search() {
-    if (!(document.querySelector(".search_list"))) return
-    if (document.querySelector(".search_item0")) return
-    get("http://ncyunhua.com:9090/api/schoolBullying/news")
-    .then(data => {
-        const search_list = document.querySelector(".search_list")
-        data.forEach(({text, time}, index) => {
-            const li = document.createElement("div")
-            li.classList.add(`search_item${index}`)
-            const te = document.createElement("div")
-            te.textContent = text
-            const ti = document.createElement("div")
-            ti.textContent = time
-            li.appendChild(te)
-            li.appendChild(ti)
-            search_list.appendChild(li)
+export default function question() {
+    if (!(document.querySelector(".content_jjfa_list"))) return
+    if (document.querySelector(".content_jjfa_list").children.length) return
+    get('http://ncyunhua.com:9090/api/schoolBullying/schoolClass')
+        .then(data => {
+            const content_jjfa_list = document.querySelector(".content_jjfa_list")
+            data.forEach(({text}, index)=> {
+                const li = document.createElement("div")
+                li.textContent = text
+                li.classList.add(`content_jjfa_item${index}`)
+                content_jjfa_list.appendChild(li)
+            })
         })
-    })
 }
