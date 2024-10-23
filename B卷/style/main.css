@@ -3,10 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
     font-family: Arial, kaiti, fangsong, sans-serif;
 }
 
-::-webkit-scrollbar {
+html::-webkit-scrollbar {
     display: none;
 }
 
@@ -24,6 +25,10 @@ li {
     list-style: none;
 }
 
+textarea {
+    resize: none;
+}
+
 .app {
     margin: 2px;
     position: relative;
@@ -38,13 +43,14 @@ li {
 
 .header {
     width: 100%;
-    height: 10vh;
+    height: 12vh;
     max-height: 70px;
     background-color: rgb(121, 195, 255);
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    box-shadow: -2px 0 10px rgba(126, 126, 126, 0.584);
 }
 .logo {
     position: relative;
@@ -73,18 +79,19 @@ li {
     justify-content: space-around;
     align-items: center;
     color: white;
-    box-shadow: -2px 0 10px rgba(234, 234, 234, 0.136);
-    background-color: rgba(234, 234, 234, 0.136);
+
 }
 .nav li {
     position: relative;
-    width: 25%;
-    height: 100%;
+    width: 16%;
+    height: 90%;
     padding-bottom: 5px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     font-size: calc(0.5vw + 0.5vh + 8px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
     cursor: pointer;
     transition: .3s;
 }
@@ -116,8 +123,8 @@ li {
 .banner {
     position: relative;
     width: 100%;
-    height: 35vh;
-    max-height: 550px;
+    height: 45vh;
+    max-height: 500px;
     overflow: hidden;
     background-color: rgb(210, 210, 210);
 }
@@ -309,7 +316,8 @@ li {
     margin: 20px;
     width: 80vw;
     max-width: 800px;
-    height: 180px;
+    height: 20vh;
+    max-height: 150px;
     border-radius: 3px;
     display: flex;
     flex-flow: row nowrap;
@@ -347,7 +355,7 @@ li {
     background-image: linear-gradient(125deg, rgb(132, 132, 255), rgb(59, 59, 255));
 }
 .content_qzzx_list>div>.right>.title{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -425,11 +433,13 @@ li {
 
 .jjfa .content {
     margin: 50px 10%;
+    padding: 10px;
     width: 80%;
-    height: 300px;
+    min-height: 300px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    border-radius: 3px;
     background-color: rgba(150, 222, 255, 0.397);
 }
 .content_jjfa_title {
@@ -469,6 +479,191 @@ li {
     background-color: rgb(159, 201, 249);
     color: white;
     cursor: pointer;
+}
+
+
+.ly  {
+    position: relative;
+    margin: 20px auto;
+    width: 90%;
+    height: auto;
+    min-height: 500px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.ly .user {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    width: 400px;
+    max-width: 90%;
+    min-height: 500px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-image: linear-gradient(30deg, rgb(87, 255, 202), rgb(128, 200, 255), rgb(82, 98, 243));
+}
+.ly .user_title {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    display: flex;
+    color: rgb(239, 239, 239);
+    justify-content: center;
+    align-items: center;
+}
+.ly .user textarea {
+    height: 120px;
+}
+
+.ly .user input, .ly .user textarea {
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid rgb(208, 208, 208);
+    padding: 10px;
+    font-size: 16px;
+}
+.user>div {
+    width: 100%;
+    display: flex;
+    margin: 10px 0;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.user>div>div {
+    width: 20%;
+    text-align: center;
+}
+.user>div>input, .user>div>textarea {
+    margin: 0 5%;
+    width: 70%;
+}
+.user_btn {
+    width: 90% !important;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgb(72, 142, 241);
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: .1s;
+}
+.user_btn:hover {
+    transition: .1s;
+    background-color: rgb(73, 195, 232);
+}
+.user_add {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.user_add_text {
+    margin: 10px 0;
+    width: 100% !important;
+    font-size: 18px;
+    color: rgb(102, 102, 102);
+}
+.user_add_input{
+    width: 100% !important;
+    height: 120px;
+}
+.user_add_key {
+    margin: 10px 0;
+    width: 100% !important;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.user_add_color {
+    margin: 0 5%;
+    width: 30%;
+}
+.user_add_range {
+    margin: 0 5%;
+    width: 50%;
+}
+
+.user_add_download, .user_add_remove{
+    margin: 10px 5%;
+    width: 40%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgb(16, 195, 46);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .1s;
+}
+.ly_add_btn{
+    position: fixed;
+    bottom: 10vh;
+    right: 10vw;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80px;
+    background-color: rgb(16, 195, 46);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: .1s;
+}
+.ly_add_btn:hover {
+    transition: .1s;
+    background-color: rgb(16, 255, 46);
+}
+
+.content_ly_title {
+    margin-top: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(98, 95, 255);
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.content_ly_list {
+    margin: 10px auto;
+    padding: 10px;
+    width: 90%;
+    min-height: 500px;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    border: 1px solid rgb(208, 208, 208);
+    box-shadow: 0 0 8px rgba(135, 135, 135, 0.3);
+    border-radius: 3px;
+}
+.content_ly_list>div {
+    margin: 20px 0;
+    width: 100%;
+    color: #333;
+    border-bottom: 1px solid rgb(208, 208, 208);
 }
 
 .white {
