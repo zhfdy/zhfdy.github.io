@@ -2,7 +2,7 @@ import get from "./api.js";
 
 export default function search() {
     if (!(document.querySelector(".search_list"))) return
-    if (document.querySelector(".search_list div")) return
+    if (document.querySelector(".search_item0")) return
     get("http://ncyunhua.com:9090/api/schoolBullying/news")
     .then(data => {
         const search_list = document.querySelector(".search_list")
