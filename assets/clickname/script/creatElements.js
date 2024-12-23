@@ -65,6 +65,7 @@ async function randomGetName() {
                         <div class="app_content_right_bottom">
                             <button class="get_name">Click me</button>
                         </div>
+                        <div class="allpeople" style="display:none"></div>
                     </div>
                 </div>
             </div>
@@ -78,23 +79,20 @@ async function randomGetName() {
     }
     madeTitleTime()
 
-
-    function showAddPeople(){
-        const p = peoples.people
-        const allPeople = document.createElement('div')
-        allPeople.classList.add('allpeople')
-        allPeople.textContent = `${JSON.stringify(p)}`
-        document.body.appendChild(allPeople)
+    function showAllPeopleName() {
+        document.querySelector('.allpeople').textContent = `${JSON.stringify(peoples.people)}`
     }
+
     function makeEye() {
         document.body.addEventListener('click', function (e) {
             if (e.target.classList.contains('eye')) {
                 if (!(e.target.classList.contains('eye_off'))) {
                     e.target.classList.add('eye_off')
-                    showAddPeople()
-                }else {
+                    document.querySelector('.allpeople') ? document.querySelector('.allpeople').style.display = '' : void 0
+                    showAllPeopleName()
+                } else {
                     e.target.classList.remove('eye_off')
-                    document.querySelector('.allpeople') ? document.querySelector('.allpeople').remove() : void 0
+                    document.querySelector('.allpeople') ? document.querySelector('.allpeople').style.display = 'none' : void 0
                 }
             }
         })
@@ -116,6 +114,7 @@ async function randomGetName() {
             addPeopleBox.closeModel()
             if (!addPeopleName || addPeopleName === '') return
             addNewPeopleName(addPeopleName)
+            showAllPeopleName()
         })
         document.querySelector('.model_close').addEventListener('click', () => {
             addPeopleBox.closeModel()
@@ -160,6 +159,7 @@ async function randomGetName() {
         }
         if (e.target.classList.contains('remove_people_btn')) {
             peoples.people = []
+            showAllPeopleName()
         }
     })
 
