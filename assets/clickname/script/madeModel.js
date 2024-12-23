@@ -22,6 +22,7 @@ export default class MadeModel {
         this.box.appendChild(this.close)
         document.body.appendChild(this.box)
 
+        this.text.focus()
         this.mask = document.createElement('div')
         this.mask.className ='mask'
         document.body.appendChild(this.mask)
