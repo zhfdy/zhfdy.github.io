@@ -35,7 +35,7 @@
                                 {
                                     name: 'xxitem2',
                                     label: 'p',
-                                    text: '(空名单)',
+                                    text: '(23级5班名单)',
                                 },
                                 {
                                     name: 'xxitem3',
@@ -122,7 +122,7 @@
                                         {
                                             name: 'xxitem2_li',
                                             label: 'li',
-                                            text: '更多游戏...',
+                                            text: '模拟地球(养成)',
                                             moremain: [
                                                 {
                                                     label: 'img',
@@ -130,7 +130,7 @@
                                                 },
                                                 {
                                                     label: 'span',
-                                                    text: '前往主页',
+                                                    text: '开始游戏',
                                                 }
                                             ],
                                         },
@@ -186,10 +186,24 @@
 })();
 
 (function (){
+    function mainItemClick() {
+        const itemArr = document.querySelectorAll('.header [class^=item]')
+        const itemUrl = ['../assets/clickname/index.html', '../assets/games/index.html', '../assets/about/index.html']
+        itemArr.forEach((box, index) => {
+            box.addEventListener('click', () => location.href = itemUrl[index])
+        })
+    }
+    mainItemClick()
 
-    const itemArr = document.querySelectorAll('.header [class^=item]')
-    const itemUrl = ['../assets/clickname/index.html', '../assets/games/index.html', '../assets/about/index.html']
-    itemArr.forEach((box, index) => {
-        box.addEventListener('click', () => location.href = itemUrl[index])
-    })
+    function gameIndexClick() {
+        const gameIndexItem = document.querySelectorAll('.xxitem2_li')
+        gameIndexItem.forEach((item, index) => {
+            item.addEventListener('click', (e) => {
+                e.stopPropagation()
+                const gameUrl = ['snake', 'fight', 'clock', 'world']
+                location.href = `../assets/games/game.html?name=game_${gameUrl[index]}`
+            })
+        })
+    }
+    gameIndexClick()
 })()
