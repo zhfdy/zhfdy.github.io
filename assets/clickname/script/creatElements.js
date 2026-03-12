@@ -185,7 +185,7 @@ async function randomGetName() {
 
         if (peoples.people.length === 0) {
             clickFlag = true
-            alert('名单数据库名字被您清空了，请重新添加或刷新页面')
+            alert('名单数据库名字被您清空了，请点击⚙️重新添加或刷新页面')
             getNameBtn.classList.remove('get_name_off')
             return
         }
