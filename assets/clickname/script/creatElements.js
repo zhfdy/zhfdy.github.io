@@ -47,8 +47,8 @@ async function randomGetName() {
                             <img class="image" src="image/bg.png" alt="">
                         </div>
                         <div class="app_content_left_bottom">
-                            <p class="name">by_zhf</p>
-                            <img class="add_people" src="image/icon.png" alt="">
+                            <p class="name">by_zhfdy</p>
+                            <img class="add_people" src="image/icon.png" alt="滚木">
                         </div>  
                     </div>
                     <div class="app_content_right">
