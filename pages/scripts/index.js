@@ -35,7 +35,7 @@
                                 {
                                     name: 'xxitem2',
                                     label: 'p',
-                                    text: '(23级5班名单)',
+                                    text: '(暂无名单)',
                                 },
                                 {
                                     name: 'xxitem3',
